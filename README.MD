@@ -11,11 +11,15 @@ npm start by default runs "npm run dev"
 
 use env.template to create your own .env and add de rstp URL for every camera.
 
-by default the app only shows 6 cameras if you need to add more this is the way
+### Cameras
 
-////////////////////////////////////////////////////////////////////////////
+by default the app only shows 6 cameras
+
+adding more cameras:
 
 add another of this changing # with the number of the camera needed
+
+## Frontend:
 
 public/js/index.js
 
@@ -28,3 +32,17 @@ canvas: document.getElementById("canvas#"), // Canvas should be a canvas DOM ele
             <div class="col-sm">
                 <canvas id="canvas#"></canvas>
             </div>
+
+## Backend:
+
+Stream# = require("node-rtsp-stream");
+stream# = new Stream#({
+name: "Cam#",
+streamUrl: process.env.CAM#\_URL,
+wsPort: #,
+ffmpegOptions: {
+// options ffmpeg flags
+"-stats": "", // an option with no neccessary value uses a blank string
+"-r": 30, // options with required values specify the value after the key
+},
+});
