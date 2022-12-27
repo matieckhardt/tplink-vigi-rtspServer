@@ -1,8 +1,8 @@
-**********\*********** RTSP SERVER by Switch IT **************\*\*\*\***************
+# RTSP SERVER by Switch IT
 
-This app allows you to capture the rtsp image from any IPCAM rtsp enabled.
+### This app allows you to capture the rtsp image from any IPCAM rtsp enabled.
 
-**Considerations**
+# **Considerations**
 
 This app runs in order to make the reset button work needs to be running
 in develop mode (nodemon)
