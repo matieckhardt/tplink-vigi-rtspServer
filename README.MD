@@ -35,14 +35,14 @@ canvas: document.getElementById("canvas#"), // Canvas should be a canvas DOM ele
 
 ## Backend:
 
-Stream# = require("node-rtsp-stream");
-stream# = new Stream#({
-name: "Cam#",
-streamUrl: process.env.CAM#\_URL,
-wsPort: #,
-ffmpegOptions: {
-// options ffmpeg flags
-"-stats": "", // an option with no neccessary value uses a blank string
-"-r": 30, // options with required values specify the value after the key
-},
-});
+            Stream# = require("node-rtsp-stream");
+                stream# = new Stream#({
+                        name: "Cam#",
+                        streamUrl: process.env.CAM#\_URL,
+                        wsPort: #,
+                        ffmpegOptions: {
+                        // options ffmpeg flags
+                        "-stats": "", // an option with no neccessary value uses a blank string
+                        " -r": 30, // options with required values specify the value after the key
+                },
+            });
