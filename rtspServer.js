@@ -1,5 +1,5 @@
 var CAM_URL = [];
-for (XX = 3; XX < process.env.CHANNELS; XX++) {
+for (XX = 2; XX < process.env.CHANNELS; XX++) {
   CAM_URL[XX] =
     "rtsp://" +
     process.env.CAM_USER +

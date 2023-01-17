@@ -38,6 +38,20 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
+// Ruta del 16A
+app.get("/16A", function (req, res) {
+  res.render("16A");
+});
+// Ruta del 16B
+app.get("/16B", function (req, res) {
+  res.render("16B");
+});
+
+// Ruta del 32ch
+app.get("/32ch", function (req, res) {
+  res.render("32ch");
+});
+
 //SERVER RESET
 app.get("/reset", function (req, res) {
   console.log("restarting");
