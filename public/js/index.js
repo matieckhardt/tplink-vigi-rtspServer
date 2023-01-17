@@ -1,28 +1,11 @@
-const WSURL = "ws://localhost";
+const WSURL = "ws://localhost:";
 
-Cam1 = new JSMpeg.Player(WSURL + ":2", {
-  canvas: document.getElementById("canvas1"), // Canvas should be a canvas DOM element
-});
-
-Cam2 = new JSMpeg.Player(WSURL + ":3", {
-  canvas: document.getElementById("canvas2"), // Canvas should be a canvas DOM element
-});
-
-Cam3 = new JSMpeg.Player(WSURL + ":4", {
-  canvas: document.getElementById("canvas3"), // Canvas should be a canvas DOM element
-});
-
-Cam4 = new JSMpeg.Player(WSURL + ":5", {
-  canvas: document.getElementById("canvas4"), // Canvas should be a canvas DOM element
-});
-
-Cam5 = new JSMpeg.Player(WSURL + ":6", {
-  canvas: document.getElementById("canvas5"), // Canvas should be a canvas DOM element
-});
-
-Cam6 = new JSMpeg.Player(WSURL + ":8", {
-  canvas: document.getElementById("canvas6"), // Canvas should be a canvas DOM element
-});
+for (x = 9; x < 42; x++) {
+  cam = new JSMpeg.Player(WSURL + x, {
+    canvas: document.getElementById("canvas" + x),
+  });
+  console.log(cam);
+}
 console.log("it Works!");
 console.log(WSURL);
 RTCRtpSender;
