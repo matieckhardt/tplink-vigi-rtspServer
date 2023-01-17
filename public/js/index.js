@@ -1,5 +1,5 @@
 const WSURL = "ws://localhost:650";
-const CHANNELS = 16;
+const CHANNELS = 32;
 
 for (x = 3; x < CHANNELS; x++) {
   let canvas = document.createElement("canvas");

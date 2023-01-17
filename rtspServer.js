@@ -1,7 +1,14 @@
 var CAM_URL = [];
 for (XX = 3; XX < process.env.CHANNELS; XX++) {
   CAM_URL[XX] =
-    "rtsp://admin:aaabbb000%2B%2B%2B@10.0.101." + XX + ":554/stream2";
+    "rtsp://" +
+    process.env.CAM_USER +
+    ":" +
+    process.env.CAM_PASS +
+    "@" +
+    process.env.CAM_IP +
+    XX +
+    ":554/stream2";
   StreamXX = require("node-rtsp-stream");
   streamXX = new StreamXX({
     name: "Cam" + XX,
