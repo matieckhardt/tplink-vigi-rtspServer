@@ -6,6 +6,6 @@ for (XX = 3; XX < process.env.CHANNELS; XX++) {
   streamXX = new StreamXX({
     name: "Cam" + XX,
     streamUrl: CAM_URL[XX],
-    wsPort: 6500 + XX,
+    wsPort: "650" + XX,
   });
 }
