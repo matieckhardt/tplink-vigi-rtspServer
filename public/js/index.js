@@ -1,10 +1,10 @@
 const WSURL = "ws://localhost:";
 
 for (x = 9; x < 42; x++) {
-  cam = new JSMpeg.Player(WSURL + x, {
+  x = new JSMpeg.Player(WSURL + x, {
     canvas: document.getElementById("canvas" + x),
   });
-  console.log(cam);
+  console.log(x);
 }
 console.log("it Works!");
 console.log(WSURL);
