@@ -1,10 +1,14 @@
-const WSURL = "ws://localhost:";
+const WSURL = "ws://localhost:650";
+const CHANNELS = 16;
 
-for (x = 9; x < 42; x++) {
-  x = new JSMpeg.Player(WSURL + x, {
+for (x = 3; x < CHANNELS; x++) {
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", "canvas" + x);
+  document.getElementById("camaras").appendChild(canvas);
+
+  cam = new JSMpeg.Player(WSURL + x, {
     canvas: document.getElementById("canvas" + x),
   });
-  console.log(x);
 }
 console.log("it Works!");
 console.log(WSURL);
